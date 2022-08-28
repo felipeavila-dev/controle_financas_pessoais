@@ -5,7 +5,11 @@ export const Container = styled.div`
 
   background-color: ${props => props.theme.colors.secondary};
   padding-left: 20px;
-  border-right: 1px solid ${props => props.theme.colors.gray}
+  border-right: 1px solid ${props => props.theme.colors.gray};
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const Header = styled.div`
@@ -29,7 +33,7 @@ export const MenuContainer = styled.nav`
   margin-top: 50px;
 `;
 
-export const MenuItemLink = styled.a`
+export const MenuItemLink = styled.div`
   display: flex;
   align-items: center;
 
@@ -40,6 +44,7 @@ export const MenuItemLink = styled.a`
 
   &:hover {
     opacity: 0.7;
+    cursor: pointer;
   }
 
   svg {
