@@ -45,7 +45,7 @@ const List: React.FC = () => {
   const urlType = useParams().type;
 
   const title = urlType === 'entry-balance' ? 'Entradas' : 'Saídas';
-  const lineColor = urlType === 'entry-balance' ? '#F7931B' : '#E44C4E'
+  const lineColor = urlType === 'entry-balance' ? '#4E41F0' : '#E44C4E'
   const listData = urlType === 'entry-balance' ? gains : expenses;
     
   useEffect(() => {
