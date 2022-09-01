@@ -21,7 +21,7 @@ const PieChartArea: React.FC<PieChartProps> = ({ data }) => (
         <LegendContainer>
           { data.map((pie) => (
             <Legend color={ pie.color } key={ pie.name }>
-              <div>{ pie.percent }%</div>
+              <div>{ pie.percent | 0 }%</div>
               <span>{ pie.name }</span>
           </Legend>
           ))}

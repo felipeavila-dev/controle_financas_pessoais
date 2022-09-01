@@ -19,6 +19,7 @@ import sadImg from '../../assets/sad.svg';
 import neutralImg from '../../assets/neutral.svg';
 import PieChartArea from '../../components/PieChartArea';
 import HistoryBox from '../../components/HistoryBox';
+import BarChartArea from '../../components/BarChartArea';
 
 interface YearOptions {
   value: number;
@@ -186,10 +187,86 @@ const Dashboard: React.FC = () => {
         amountOutput
       };
 
-    });
-  }, []);
+    }).filter((item) => {
+      const currentMonth = new Date().getMonth();
+      const currentYear = new Date().getFullYear();
 
-  console.log(historyData);
+      return (yearSelected === currentYear && item.monthNumber <= currentMonth) || (yearSelected < currentYear);
+    });
+  }, [yearSelected]);
+
+  const relationExpensesBetweenEventualAndRecurrent = useMemo(() => {
+    let amountRecurrent = 0;
+    let amoutEventual = 0;
+
+    expenses.filter((expense) => {
+      const date = new Date(expense.date);
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+      
+      return month === monthSelected && year === yearSelected;
+    
+    }).forEach((expense) => {
+      if(expense.frequency === 'recorrente') return amountRecurrent += Number(expense.amount);
+
+      if(expense.frequency === 'eventual') return  amoutEventual += Number(expense.amount);
+    });
+
+    const total = amountRecurrent + amoutEventual;
+
+    console.log('Recorrente:' + amountRecurrent, amoutEventual);
+    return [
+      {
+        name: 'Recorrentes',
+        amount: amountRecurrent,
+        percent: Number(((amountRecurrent / total) * 100).toFixed(1)),
+        color: '#F7931B'
+      },
+      {
+        name: 'Eventual',
+        amount: amoutEventual,
+        percent: Number(((amoutEventual / total) * 100).toFixed(1)),
+        color: '#E44C4E'
+      }
+    ];
+  }, [monthSelected, yearSelected]);
+
+  const relationGainsBetweenEventualAndRecurrent = useMemo(() => {
+    let amountRecurrent = 0;
+    let amoutEventual = 0;
+
+    gains.filter((gain) => {
+      const date = new Date(gain.date);
+      const year = date.getFullYear();
+      const month = date.getMonth() + 1;
+      
+      return month === monthSelected && year === yearSelected;
+    
+    }).forEach((gain) => {
+      if(gain.frequency === 'recorrente') return amountRecurrent += Number(gain.amount);
+
+      if(gain.frequency === 'eventual') return  amoutEventual += Number(gain.amount);
+    });
+
+    const total = amountRecurrent + amoutEventual;
+
+    console.log('Recorrente:' + amountRecurrent, amoutEventual);
+    return [
+      {
+        name: 'Recorrentes',
+        amount: amountRecurrent,
+        percent: Number(((amountRecurrent / total) * 100).toFixed(1)),
+        color: '#F7931B'
+      },
+      {
+        name: 'Eventual',
+        amount: amoutEventual,
+        percent: Number(((amoutEventual / total) * 100).toFixed(1)),
+        color: '#E44C4E'
+      }
+    ];
+  }, [monthSelected, yearSelected]);
+
 
   return  (
     <Container>
@@ -245,6 +322,17 @@ const Dashboard: React.FC = () => {
           lineColorAmountInput='#F7931B'
           lineColorAmountOutput='#E44C4E'
         />
+
+        <BarChartArea
+          title='Saídas'
+          data={ relationExpensesBetweenEventualAndRecurrent }
+        />
+
+        <BarChartArea
+          title='Entradas'
+          data={ relationGainsBetweenEventualAndRecurrent }
+        />
+
       </Content>
     </Container>
   );
