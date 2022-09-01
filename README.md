@@ -1,46 +1,49 @@
-# Getting Started with Create React App
+# Descrição do projeto:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+O controle de finanças pessoais te permite cadastrar e filtrar despesas e receitas através do mês/ano, bem como mostrar através de graficos o balanço relacionado ao periodo selecionado. ( Em desenvolvimento )
 
-## Available Scripts
+Tarefas que podem ser realizadas:
 
-In the project directory, you can run:
+- Inclusão de receitas e/ou despesas
+- Filtragem de receitas e/ou despesas através do mês/ano
+- Verificar o balanço do mês/ano através do gráfico de pizza selecionado através de gráfico
+- Verificar o balanço do ano através do gráfico de linhas selecionado o ano em questão
 
-### `npm start`
+Tarefas que faltam implementar:
+- Tela para cadastro de desesas e receitas
+- Tela de Login
+- Responsividade para dispositivos móveis
+- Mudança de temas dark/light
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+# Tecnologias utilizadas:
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+- <b> React Js</b>
+- <b> Typescript </b>
+- <b> Styled Components </b>
+- <b> Recharts </b> -Biblioteca para utilização de gráficos - [Link da biblioteca](https://www.npmjs.com/package/react-toastify)
+- <b> uuid </b> - Gerar IDs aleatórios - [Link da biblioteca](https://www.npmjs.com/package/uuidv4)
+- <b> CountUP </b> - Responsável pelas animações númericas do dashboard [Link da biblioteca](https://www.npmjs.com/package/react-countup)
 
-### `npm test`
+![controle_financas_pessoais](https://user-images.githubusercontent.com/26674677/187722524-7133c23c-5e8c-4809-bb73-6eea95fe100f.gif)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+## Para clonar o projeto:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+SSH: `git@github.com:felipeavila-dev/controle_financas_pessoais.git`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+or
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+HTTPS: `https://github.com/felipeavila-dev/controle_financas_pessoais.git`
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+## Para instalar as dependências:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Vá para a pasta do projeto e execute `npm install`.
+O comando irá instalar todas dependências necessárias para que o projeto funcione perfeitamente.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## Para rodar o projeto:
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Execute: `npm start`
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+Abra [http://localhost:3000](http://localhost:3000) em seu navegador.
