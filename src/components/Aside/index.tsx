@@ -1,19 +1,33 @@
-import React from 'react';
-import { Container, Header, LogoImg, Title, MenuContainer, MenuItemLink } from './styles';
+import React, { useState, useContext } from 'react';
+import { Container, Header, LogoImg, Title, MenuContainer, MenuItemLink, MenuMobile, ThemeToggleMobile } from './styles';
 
-import {MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp} from 'react-icons/md';
+import {MdDashboard, MdArrowDownward, MdArrowUpward, MdExitToApp, MdClose, MdMenu, MdMenuOpen} from 'react-icons/md';
 
 import { useAuth } from '../../hooks/auth';
 
+import dark from '../../styles/themes/dark'
+import light from '../../styles/themes/light'
+
 import Logo from '../../assets/logo.svg'
 import { Link } from 'react-router-dom';
+import { ThemeContext } from '../../contexts/themeContext';
+import Toggle from '../Toggle';
 
 const Aside: React.FC = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
   const { signOut } = useAuth();
 
+  const handleToggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  }
+
   return  (
-    <Container>
+    <Container menuIsOpen={isMenuOpen}>
       <Header>
+        <MenuMobile onClick={ handleToggleMenu }>
+          { isMenuOpen ? <MdClose /> : <MdMenuOpen />}
+        </MenuMobile>
         <LogoImg src={Logo} alt="Logo Minha Carteira" />
         <Title>Minha carteira</Title>
       </Header>
@@ -45,6 +59,10 @@ const Aside: React.FC = () => {
           Sair
         </MenuItemLink>
       </MenuContainer>
+
+      <ThemeToggleMobile>
+        <Toggle />
+      </ThemeToggleMobile>
     </Container>
   );
 }

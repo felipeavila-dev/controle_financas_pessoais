@@ -1,8 +1,24 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const animate = keyframes`
+  9% {
+    transform: translateX(500px);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+`;
 
 export const Container = styled.div``;
 
-export const Content = styled.main``;
+export const Content = styled.main`
+  animation: ${animate} .4s;
+`;
 
 export const Filters = styled.div`
   width: 100%;

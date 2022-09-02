@@ -35,6 +35,36 @@ export const Container = styled.div<ContainerProps>`
 
     bottom: 10px;
   }
+
+  @media(max-width: 770px) {
+    span {
+      font-size: 14px;
+    }
+
+    h1 {
+      word-wrap: break-word;
+      font-size: 24px;
+
+      strong {
+        display: inline-block;
+        width: 100%;
+        font-size: 16px;
+      }
+    }
+  }
+
+  @media(max-width: 420px) {
+    width: 100%;
+
+    h1 {
+      display: flex;
+
+      strong {
+        width: auto;
+        margin-right: 5px;
+      }
+    }
+  }
 `;
 
 

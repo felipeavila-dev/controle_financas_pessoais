@@ -1,4 +1,18 @@
-import styled from "styled-components";
+import styled, { keyframes } from "styled-components";
+
+const animate = keyframes`
+  9% {
+    transform: translateX(-500px);
+  }
+  50% {
+    opacity: .3;
+  }
+  100% {
+    transform: translateX(0px);
+    opacity: 1;
+
+  }
+`;
 
 export const Container = styled.div`
   width: 48%;
@@ -13,6 +27,8 @@ export const Container = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
+  animation: ${animate} .8s;
+
   header img {
     width: 35px;
     margin-left: 10px;
@@ -20,5 +36,11 @@ export const Container = styled.div`
 
   header p {
     font-size: 18px;
+  }
+
+  @media(max-width: 770px) {
+    width: 100%;
+
+
   }
 `;

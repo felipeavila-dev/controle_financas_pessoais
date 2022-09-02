@@ -12,7 +12,9 @@ export const Container = styled.div`
   padding: 30px 20px;
   border-radius: 7px;
 
-
+  @media(max-width: 420px) {
+    padding: 20px 10px;
+  }
 `;
 
 export const ChartContainer = styled.div`
@@ -29,11 +31,19 @@ export const Header = styled.header`
     margin-bottom: 20px;
     margin-left: 18px;
   }
+
+  @media(max-width: 420px) {
+    flex-direction: column;
+  }
 `;
 
 export const LegendContainer = styled.ul`
   list-style: none;
   display: flex;
+
+  @media(max-width: 420px) {
+    margin-left: 20px;
+  }
 `;
 
 export const Legend = styled.li`
