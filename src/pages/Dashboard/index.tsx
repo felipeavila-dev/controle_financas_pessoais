@@ -214,7 +214,6 @@ const Dashboard: React.FC = () => {
 
     const total = amountRecurrent + amoutEventual;
 
-    console.log('Recorrente:' + amountRecurrent, amoutEventual);
     return [
       {
         name: 'Recorrentes',
@@ -250,7 +249,6 @@ const Dashboard: React.FC = () => {
 
     const total = amountRecurrent + amoutEventual;
 
-    console.log('Recorrente:' + amountRecurrent, amoutEventual);
     return [
       {
         name: 'Recorrentes',

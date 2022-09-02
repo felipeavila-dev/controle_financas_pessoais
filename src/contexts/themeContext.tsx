@@ -39,7 +39,7 @@ export const ThemeContextProvider = ({ children }: ThemeProviderProps) => {
     if(localStorageTheme) {
       return JSON.parse(localStorageTheme);
     } else {
-      return light;
+      return dark;
     }
   });
 
