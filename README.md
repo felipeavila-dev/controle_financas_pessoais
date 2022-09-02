@@ -1,6 +1,6 @@
 # Descrição do projeto:
 
-O controle de finanças pessoais te permite cadastrar e filtrar despesas e receitas através do mês/ano, bem como mostrar através de graficos o balanço relacionado ao periodo selecionado. ( Em desenvolvimento )
+O controle de finanças pessoais te permite filtrar despesas e receitas através do mês/ano, bem como mostrar através de graficos o balanço relacionado ao periodo selecionado.
 
 Tarefas que podem ser realizadas:
 
