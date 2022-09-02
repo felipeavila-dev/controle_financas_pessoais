@@ -4,21 +4,20 @@ O controle de finanças pessoais te permite cadastrar e filtrar despesas e recei
 
 Tarefas que podem ser realizadas:
 
-- Inclusão de receitas e/ou despesas
+- Efetuar Login / Logout através dos dados: Usuario: usuario@usuario.com | Senha: 123
 - Filtragem de receitas e/ou despesas através do mês/ano
 - Verificar o balanço do mês/ano através do gráfico de pizza selecionado através de gráfico
 - Verificar o balanço do ano através do gráfico de linhas selecionado o ano em questão
+- Mudança de temas Light / Dark
 
 Tarefas que faltam implementar:
-- Tela para cadastro de desesas e receitas
-- Tela de Login
 - Responsividade para dispositivos móveis
-- Mudança de temas dark/light
 
 # Tecnologias utilizadas:
 
 - <b> React Js</b>
 - <b> Typescript </b>
+- <b> Context API </b>
 - <b> Styled Components </b>
 - <b> Recharts </b> -Biblioteca para utilização de gráficos - [Link da biblioteca](https://www.npmjs.com/package/react-toastify)
 - <b> uuid </b> - Gerar IDs aleatórios - [Link da biblioteca](https://www.npmjs.com/package/uuidv4)
