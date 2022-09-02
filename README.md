@@ -1,30 +1,29 @@
 # Descrição do projeto:
 
-O controle de finanças pessoais te permite cadastrar e filtrar despesas e receitas através do mês/ano, bem como mostrar através de graficos o balanço relacionado ao periodo selecionado. ( Em desenvolvimento )
+O controle de finanças pessoais te permite filtrar despesas e receitas através do mês/ano, bem como mostrar através de graficos o balanço relacionado ao periodo selecionado.
 
 Tarefas que podem ser realizadas:
 
-- Inclusão de receitas e/ou despesas
+- Efetuar Login / Logout através dos dados: Usuario: usuario@usuario.com | Senha: 123
 - Filtragem de receitas e/ou despesas através do mês/ano
 - Verificar o balanço do mês/ano através do gráfico de pizza selecionado através de gráfico
 - Verificar o balanço do ano através do gráfico de linhas selecionado o ano em questão
+- Mudança de temas Light / Dark
 
 Tarefas que faltam implementar:
-- Tela para cadastro de desesas e receitas
-- Tela de Login
 - Responsividade para dispositivos móveis
-- Mudança de temas dark/light
 
 # Tecnologias utilizadas:
 
 - <b> React Js</b>
 - <b> Typescript </b>
+- <b> Context API </b>
 - <b> Styled Components </b>
 - <b> Recharts </b> -Biblioteca para utilização de gráficos - [Link da biblioteca](https://www.npmjs.com/package/react-toastify)
 - <b> uuid </b> - Gerar IDs aleatórios - [Link da biblioteca](https://www.npmjs.com/package/uuidv4)
 - <b> CountUP </b> - Responsável pelas animações númericas do dashboard [Link da biblioteca](https://www.npmjs.com/package/react-countup)
 
-![controle_financas_pessoais](https://user-images.githubusercontent.com/26674677/187722524-7133c23c-5e8c-4809-bb73-6eea95fe100f.gif)
+![controle_financas_pessoais](https://user-images.githubusercontent.com/26674677/188196777-2d4808ce-753a-40a5-94f3-cc1d1d1abe0f.gif)
 
 
 ## Para clonar o projeto:
