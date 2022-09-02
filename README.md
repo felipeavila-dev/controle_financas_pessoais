@@ -23,7 +23,7 @@ Tarefas que faltam implementar:
 - <b> uuid </b> - Gerar IDs aleatórios - [Link da biblioteca](https://www.npmjs.com/package/uuidv4)
 - <b> CountUP </b> - Responsável pelas animações númericas do dashboard [Link da biblioteca](https://www.npmjs.com/package/react-countup)
 
-![controle_financas_pessoais](https://user-images.githubusercontent.com/26674677/187722524-7133c23c-5e8c-4809-bb73-6eea95fe100f.gif)
+![controle_financas_pessoais](https://user-images.githubusercontent.com/26674677/188196777-2d4808ce-753a-40a5-94f3-cc1d1d1abe0f.gif)
 
 
 ## Para clonar o projeto:
