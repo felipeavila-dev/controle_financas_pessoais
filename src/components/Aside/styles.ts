@@ -17,7 +17,7 @@ export const Container = styled.div<ContainerProps>`
 
   position: relative;
 
-  @media(max-width: 720px) {
+  @media(max-width: 770px) {
     padding: 0 20px;
     position: fixed;
     z-index: 2;
@@ -40,7 +40,7 @@ export const LogoImg = styled.img`
   width: 40px;
 
   
-  @media(max-width: 720px) {
+  @media(max-width: 770px) {
   display: none; 
   }
 `;
@@ -50,7 +50,7 @@ export const Title = styled.h3`
   margin-left: 10px;
 
   
-  @media(max-width: 720px) {
+  @media(max-width: 770px) {
    display: none; 
   }
 `;
@@ -82,7 +82,7 @@ export const MenuItemLink = styled.div`
 `;
 
 export const MenuMobile = styled.button`
-  @media(min-width: 760px) {
+  @media(min-width: 770px) {
     display: none;
   }
   
@@ -106,5 +106,7 @@ export const MenuMobile = styled.button`
 `;
 
 export const ThemeToggleMobile = styled.div`
-
+  @media(min-width: 770px) {
+    display: none;
+  }
 `;
