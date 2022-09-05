@@ -32,6 +32,8 @@ export const Form = styled.form`
   padding: 30px;
   border-radius: 10px;
   background-color: ${ props => props.theme.colors.tertiary };
+
+
 `;
 
 export const FormTitle = styled.h1`

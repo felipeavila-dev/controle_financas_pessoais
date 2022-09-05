@@ -22,8 +22,8 @@ const SignIn: React.FC = () => {
 
       <Form onSubmit={() => signIn(email, password)}>
         <FormTitle>Entrar</FormTitle>
-        <Input type="email" placeholder="email" onChange={(e) => setEmail(e.target.value)} required />
-        <Input type="password" placeholder="senha" onChange={(e) => setPassword(e.target.value)} required />
+        <Input type="email" placeholder="Email: usuario@usuario.com" onChange={(e) => setEmail(e.target.value)} required />
+        <Input type="password" placeholder="Senha: 123" onChange={(e) => setPassword(e.target.value)} required />
         <Button type="submit">
           Acessar
         </Button>
