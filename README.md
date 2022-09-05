@@ -10,8 +10,6 @@ Tarefas que podem ser realizadas:
 - Verificar o balanço do ano através do gráfico de linhas selecionado o ano em questão
 - Mudança de temas Light / Dark
 
-Tarefas que faltam implementar:
-- Responsividade para dispositivos móveis
 
 # Tecnologias utilizadas:
 
