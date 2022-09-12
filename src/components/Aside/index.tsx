@@ -22,6 +22,10 @@ const Aside: React.FC = () => {
     setIsMenuOpen(!isMenuOpen);
   }
 
+  const handleCloseMenu = () => {
+    setIsMenuOpen(false);
+  }
+
   return  (
     <Container menuIsOpen={isMenuOpen}>
       <Header>
@@ -33,21 +37,21 @@ const Aside: React.FC = () => {
       </Header>
 
       <MenuContainer>
-        <Link to="/">
+        <Link to="/" onClick={ handleCloseMenu }>
           <MenuItemLink>
             <MdDashboard />
             Dashboard
           </MenuItemLink>
         </Link>
 
-        <Link to="/list/entry-balance">
+        <Link to="/list/entry-balance" onClick={ handleCloseMenu }>
           <MenuItemLink >
               <MdArrowUpward />
               Entradas  
           </MenuItemLink>
         </Link>
 
-        <Link to="/list/exit-balance">
+        <Link to="/list/exit-balance" onClick={ handleCloseMenu }>
           <MenuItemLink >
               <MdArrowDownward />
               Saídas
